@@ -1,0 +1,193 @@
+
+@media (max-width: 768px) {
+    /* CSS rules specific to smaller screens */
+}
+
+body{
+    background-image:url("https://getwallpapers.com/wallpaper/full/f/f/0/363973.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.maindiv{
+    display:flex;
+    flex-direction: column;
+    flex:5;
+    margin:65px 150px;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+.nav_bar{
+    background-color:  rgba(255,255,255,0.5);
+    display: flex;
+    flex-direction: row;
+    border-bottom: solid grey 2px;
+    border-radius: 45px;
+    margin-bottom:20px;
+}
+
+
+.logo{
+    width: 120px;
+    height:120px;
+    border-radius: 100px;
+}
+.sub_nav_bar{
+    width: 60px;
+    height:60px;
+    border-radius: 100px;
+    font-size: 40px;
+    margin-top: 40px;
+    color:black;
+}
+.login_sinup{
+    display: flex;
+    justify-content: center;
+}
+a{
+    color:black;
+    text-decoration: none;
+}
+.a:hover{
+    cursor: pointer;
+    text-shadow: 2px 2px 5px red;
+}
+
+.login-page{
+    background-color:white;
+    width:500px;
+    height:400px;
+    padding:30px;
+    
+}
+
+input{
+    height:40px;
+}
+.check-button{
+    margin-left:30px;
+    font-size:50px;
+    color:white;
+    border: none;
+    margin: 0px 20px;
+    background:black;
+    font-family:'Times New Roman', Times, serif;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:20px;
+    padding-bottom:20px;
+    border-radius:10px;
+}
+button:hover{
+    cursor: pointer;
+    color:rgb(127, 127, 190);
+    border-radius: 50px;
+    
+}
+.home{
+    display: flex;
+    justify-content: center;
+}
+.Contact_us{
+    padding-left: 100px;
+    background-color:  rgba(255,255,255,0.5);
+}
+h2{
+    margin-bottom: 10px;
+}
+
+.k1{text-align: center;}
+input{
+    height: 40px;
+    margin-bottom: 20px;
+}
+.username{
+    margin-left:10px;
+    font-size:30px;
+}
+.password{
+    margin-left:10px;
+    margin-top:20px;
+    font-size:30px;
+}
+.user-input{
+    margin-left: 20px;
+    width:300px;
+}
+.remember{
+    font-size:600px;
+}
+.password-input{
+    margin-left: 20px;
+    width:300px;
+}
+.login-text{
+    text-align:center;
+    font-size:50px;
+}
+.cancel{
+    margin-left:20px;
+    margin-top:20px;
+    width: auto;
+    padding: 10px 18px;
+    background-color: #e7dad9;
+    font-size:25px;
+}
+.login-button{
+    margin-top:10px;
+    width: auto;
+    padding: 10px 18px;
+    background-color: #e7dad9;
+    font-size:25px;
+    margin-left:35px;
+}
+.fpass{
+    font-size:23px;
+    margin-left:350px;
+    background-color:white;
+    border: 0px;
+}
+
+
+.heading{
+    text-align: center;
+    font-size: 45px;
+    margin-top: 30px;
+    margin-bottom:20px;
+}
+.singup{
+    border: solid black 4px;
+    display:none;
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    right:0;
+    top: 0;
+   
+    margin-top: 15%;
+    margin-left: 20%;
+    background-color: rgb(224, 220, 220);
+    padding: 30px;
+    border-radius: 10px;
+    height:350px;
+    width:30%;
+    box-shadow: 0 0 15px rgb(215, 212, 212);
+}
+.uname-input{
+    margin-left: 80px;
+}
+.sp-input{
+    margin-left:58px;
+}
+.rp-input{
+    margin-left: 25px;
+}
+.singup label {
+    font-size: 20px;
+    /* Add more common CSS styles as needed */
+}
+
+.login-button{
+    padding:10px;
+    border-radius:4px;
+}

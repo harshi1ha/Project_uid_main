@@ -1,0 +1,14 @@
+body{background-image: url(https://getwallpapers.com/wallpaper/full/f/f/0/363973.jpg);}
+.container {
+    background-color: rgb(240, 169, 169);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 0, 0);
+    width: 100%;
+    max-width: 600px;
+  }
+  .book {
+    background-color:green;
+    color:white;
+    margin-left:350px;
+  }

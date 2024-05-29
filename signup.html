@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <style>
+        body{
+    background-color: rgb(234, 227, 227);
+    font-family: Arial, sans-serif;
+}
+.signup{
+    border:solid black  3px;
+    background-color: rgb(240, 169, 169);
+    border-radius: 10px;
+    height:350px;
+    width:500px;
+    box-shadow: 0 0 15px rgb(255, 0, 0);
+    margin-left:500px;
+    margin-top: 150px;
+}
+.k1{
+    align-items: center;
+    margin: 30px;
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+}
+label{
+    font-size:20px;
+    margin-right: 20px;
+}
+input{
+    height:20px;
+    margin-bottom: 20px;
+}
+button{
+    height:35px;
+}
+    </style>  
+</head>
+<body>
+    <div class="signup">
+    <h1>Signup</h1>
+    <form action="/submit" method="post" class="k1">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"required>
+        <br>
+        <button type="submit">Signup</button>
+    </form>
+    </div>
+   
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="maindiv">
+        <div class="nav_bar">
+            <div style=" flex:0.8;">
+                <img src="train.jpg" class="logo" >
+            </div>
+            <div style=" flex:0.5;" class="sub_nav_bar">
+            <a class="a">Home</a>
+            </div>
+            <div  class="sub_nav_bar" style="flex:1;">
+                <a class="a" href="#Contact_us">Contact Us</a>
+            </div>
+            <div style="flex:1;" class="sub_nav_bar">
+                <a class="a" onclick="document.getElementById('login').style.display='block'">Login</a>
+            </div>
+                <div style="flex:1" class="sub_nav_bar">
+                    <a href="./signup.html" role="button">Signup</a>
+                
+            </div>
+        </div>
+        <div style="flex:1;display: flex;flex-direction: row;">
+            <div class="login-page">
+            
+                <form id="loginForm"  onsubmit="event.preventDefault(); validateAndRedirect();">
+                    <h1 class="login-text"> Login </h1>
+                    <label for="name" class="username"><b>Username</b></label>
+                    <input type="text"  name="Username" id="username" required>
+                    <br>
+                    <label for="password" class="password" id="password"><b>Password</b></label>
+                    <input type="password"  name="password"  required><br>
+                   
+                    
+                   
+                    <button  type="submit" id="login" class="login-button">Login</button>
+                  
+                    
+                   
+                </form>
+                <div id="errorMessage"></div>
+            </div>
+            
+        </div>
+
+    </div>
+    <div class="Contact_us" id="Contact_us">
+        <h1 style="font-size:50px;">Contact Us</h1>
+        <ul><li><h2>For All Public Grievances please DIAL - 139 .</h2></li>
+        <li><h2>For All Security Related Issues, please DIAL - 182</h2></li>
+        <li><h2> Note: For All RRBs related issues please contact their respective websites.</h2></li>
+        <li><h2>For lodging complaint at Rail Madad visit -</h2></li>
+        <h2>
+            <a style="color:blue" href="https://railmadad.indianrailways.gov.in/madad/final/home.jsp"> https://railmadad.indianrailways.gov.in/madad/final/home.jsp</a>
+        </h2>
+        <br>
+        <h2>* Note-All uploaded Data/Information provided by concerned directorates</h2></ul>
+    </div>
+    <script>
+        function validateAndRedirect() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if (username === '' || password === '') {
+                alert('Please enter both username and password.');
+            } else {
+               window.location.href='main.html'
+            }
+        }
+    </script>
+</body>
+</html>

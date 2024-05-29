@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+.login-container{margin-top: 15%;margin-left: 20%;
+  background-color: rgb(240, 169, 169);
+  padding: 30px;
+  border-radius: 10px;
+  height:250px;width:50%;
+  box-shadow: 0 0 15px rgba(255, 0, 0);}
+
+.k1{text-align: center;}
+    
+  
+    
+    
+
+  </style>
+</head>
+<body>
+
+
+
+<div class="login-container">
+  <h2 class="k1" >Welcome Back!</h2>
+  <form action="/login" method="post" class="k1">
+    <input type="text" placeholder="Username" name="username" required>
+    <div class="password-container">
+      <input type="password" placeholder="Password" name="password" id="password" required>
+      <i class="fas fa-eye toggle-password" id="togglePassword"></i>
+    </div>
+    <input type="submit" value="Login">
+  </form>
+  
+</div>
+
+<script>
+    document.getElementById('togglePassword').addEventListener('click', function (e) {
+      const password = document.getElementById('password');
+      const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+      password.setAttribute('type', type);
+      this.classList.toggle('fa-eye-slash');
+    });
+  </script>
+
+</body>
+</html>

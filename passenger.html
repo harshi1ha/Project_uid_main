@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Passenger Details</title>
+</head>
+
+
+<style>
+    body {
+        background-image: url("https://getwallpapers.com/wallpaper/full/f/f/0/363973.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        
+    }
+    .container {
+        width: 80%;
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: rgb(240, 169, 169);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(255, 0, 0);;
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    .form-group label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+    }
+    .form-group input, .form-group select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .passenger {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 15px;
+        margin-bottom: 20px;
+        position: relative;
+    }
+    .passenger h3 {
+        margin-top: 0;
+    }
+    .remove-passenger {
+        background-color: #dc3545;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    .remove-passenger:hover {
+        background-color: #c82333;
+    }
+    .add-passenger {
+        background-color: #28a745;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+    .add-passenger:hover {
+        background-color: #218838;
+    }
+    .passenger-actions {
+        margin-top: 20px;
+    }
+    .max-passengers {
+        color: red;
+        margin-top: 10px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Passenger Details</h2>
+    <div id="passengerContainer">
+        <div class="passenger">
+            <span class="remove-passenger" onclick="removePassenger(this)">Remove</span>
+            <h3>Passenger 1</h3>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="name" name="name[]" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" class="age" name="age[]" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select class="gender" name="gender[]" required>
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="passenger-actions">
+        <button type="button" class="add-passenger" onclick="addPassenger()">Add Passenger</button>
+        <p class="max-passengers" id="maxPassengers"></p>
+    </div>
+   
+</div>
+
+<script>
+    const maxPassengers = 50; // Maximum number of passengers allowed
+
+    function addPassenger() {
+        const passengerContainer = document.getElementById('passengerContainer');
+        const passengers = passengerContainer.querySelectorAll('.passenger');
+        if (passengers.length < maxPassengers) {
+            const lastPassenger = passengers[passengers.length - 1];
+            const newPassenger = lastPassenger.cloneNode(true);
+            const passengerNumber = passengers.length + 1;
+            newPassenger.querySelector('h3').textContent = 'Passenger ' + passengerNumber;
+            newPassenger.querySelectorAll('input, select').forEach(function(element) {
+                element.value = '';
+            });
+            newPassenger.querySelector('.remove-passenger').style.display = 'inline-block';
+            passengerContainer.appendChild(newPassenger);
+        } else {
+            document.getElementById('maxPassengers').textContent = 'Maximum ' + maxPassengers + ' passengers allowed.';
+        }
+    }
+
+    function removePassenger(element) {
+        element.closest('.passenger').remove();
+        document.getElementById('maxPassengers').textContent = ''; 
+    }
+</script>
+
+</body>
+</html>
